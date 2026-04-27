@@ -125,7 +125,7 @@ The input matrix, on the other hand, is expected to be provided on each usage.
 
 Given our input and output data buses are only 8 bits wide, for data transfers to and from the chip the matrices are flattened in the following order:
 
-![flattened](flat.svg)
+
 
 Notes:
 - All references to `cycles` below are clocked according to the `clk` pin.
