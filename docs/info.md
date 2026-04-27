@@ -206,7 +206,6 @@ I =
 6 & 7 
 \end{pmatrix} 
 ```
-![data configuration timing diagram](wr_data_waves.png)
 
 ### Receiving result
 
