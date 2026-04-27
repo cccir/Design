@@ -1,3 +1,4 @@
+
 <!---
 
 This file is used to generate your project datasheet. Please fill in the information below and delete any unused
@@ -27,9 +28,8 @@ This accelerator uses the following pinout:
 | ui[6] = data_i[5] | uo[6] = result_o | uio[6] = tdo             |
 | ui[7] = data_i[6] | uo[7] = result_o | uio[7] = result_v_o      |
  
-![Chip pinout](chip.svg) 
 
-# MAC 
+ 
 
 This MAC accelerator operates at up to 50MHz and is capable of reaching up to 100 MMAC/s or 200 MIOPS/s. 
 
@@ -148,8 +148,6 @@ transfer cycle during which :
 
 In this example we are resetting both the data streaming index and the weight index back to back. 
 
-![rst configuration timing diagram](rst_waves.png)
-
 ### Configure weights
 
 Configuring the weights takes 4 data transfer cycles, during which : 
@@ -168,7 +166,6 @@ W =
 2 & 3 
 \end{pmatrix} 
 ```
-![weights configuration timing diagram](wr_weights_waves.png)
 
 #### Debug
 
@@ -238,7 +235,7 @@ R = I \times W =
 14 & 27
 \end{pmatrix}
 ```
-![result streamout](rd_res_waves.png)
+
 
 #### Complex example 
 
@@ -246,7 +243,7 @@ Internally, the accelerator takes at most 4 cycles to produce a result from inco
 
 This is why, in the firmware (`firmware/main.c`), we set up the DMA stream to receive the data before we start sending the input matrix, as the gap between sending and getting the result is too small for the controlling MCU to perform any type of compute.
 
-![non-trivial read sequence](rd_res_complex_waves.png)
+
 
 # DFT 
 
