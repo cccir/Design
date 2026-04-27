@@ -3,16 +3,16 @@
 
 # defaults
 SIM ?= icarus
-FST ?= -fst # Use more efficient FST format
+WAVES ?= 1
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES =  
 
 ifneq ($(GATES),yes)
 
 # RTL simulation:
 SIM_BUILD				= sim_build/rtl
-VERILOG_SOURCES += $(addprefix $(SRC_DIR)/,$(PROJECT_SOURCES))
+VERILOG_SOURCES += $(wildcard $(SRC_DIR)/*.v)
 
 else
 
